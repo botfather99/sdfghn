@@ -23,7 +23,7 @@ This tool is for educational purposes only. Use it responsibly and only on phone
 - Timestamps included for each request
 - Success/failure status tracking
 - Detailed error information
-- Debug mode is enabled by default — API responses are printed to the console and logged to file
+- Debug mode is enabled by default API responses are printed to the console and logged to file
 
 ## Smart Request Management
 - Automatic rate limiting based on API configuration
