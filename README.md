@@ -1,6 +1,6 @@
 # BomBX-CLI 📱💥
 
-A powerful SMS, Call & WhatsApp bombing tool for educational and testing purposes. This tool allows you to send multiple SMS, make calls, and send WhatsApp messages to test the robustness of various APIs.
+A powerful SMS, Call & WhatsApp bombing tool for educational and testing purposes. 
 
 ## ⚠️ Disclaimer
 This tool is for educational purposes only. Use it responsibly and only on phone numbers you own or have explicit permission to test. The developer is not responsible for any misuse of this tool.
