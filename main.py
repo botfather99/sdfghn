@@ -18,17 +18,6 @@ from datetime import datetime
 import urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-def generate_random_firstname():
-    return ''.join(random.choices(string.ascii_lowercase, k=random.randint(5, 8))).capitalize()
-
-def generate_random_lastname():
-    return ''.join(random.choices(string.ascii_lowercase, k=random.randint(5, 8))).capitalize()
-
-def generate_random_email(firstname, lastname):
-    domains = ["gmail.com", "yahoo.com", "outlook.com", "icloud.com"]
-    return f"{firstname.lower()}{lastname.lower()}{random.randint(10, 9999)}@{random.choice(domains)}"
-
-
 R = "\033[1;31m"
 G = "\033[1;32m"
 Y = "\033[1;33m"
@@ -51,8 +40,19 @@ RD = "\033[0;31m"
 NW = "\x1b[1;38;5;51m"
 RESET = "\033[0m"
 
-debugging = True
+debugging = False
 
+
+def generate_random_firstname():
+    return ''.join(random.choices(string.ascii_lowercase, k=random.randint(5, 8))).capitalize()
+
+def generate_random_lastname():
+    return ''.join(random.choices(string.ascii_lowercase, k=random.randint(5, 8))).capitalize()
+
+def generate_random_email(firstname, lastname):
+    domains = ["gmail.com", "yahoo.com", "outlook.com", "icloud.com"]
+    return f"{firstname.lower()}{lastname.lower()}{random.randint(10, 9999)}@{random.choice(domains)}"
+    
 
 class Bomber:
     def __init__(self, config_path, mode):
