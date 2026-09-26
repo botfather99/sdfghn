@@ -779,8 +779,1575 @@
           "mobile": "{phone}"
         },
         "sleep": 3
-             }        "sleep": 3
+      },
+      "Kerala_State_Cooperative_Bank_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.kccb.in/api/v1/user/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "Andhra_Pradesh_State_Cooperative_Bank_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.apccb.in/api/v1/user/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "Telangana_State_Cooperative_Bank_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.tscb.in/api/v1/user/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "Odisha_State_Cooperative_Bank_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.ocb.in/api/v1/user/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "Bihar_State_Cooperative_Bank_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.bcb.in/api/v1/user/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "Jharkhand_State_Cooperative_Bank_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.jccb.in/api/v1/user/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "Chhattisgarh_State_Cooperative_Bank_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.ccb.in/api/v1/user/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "Madhya_Pradesh_State_Cooperative_Bank_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.mpccb.in/api/v1/user/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "Rajasthan_State_Cooperative_Bank_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.rcb.in/api/v1/user/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "Gujarat_State_Cooperative_Bank_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.gcb.in/api/v1/user/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
       }
-    }
-  }
-}
+    },
+    "SOCIAL_MEDIA_AND_COMMUNICATION": {
+      "WhatsApp_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://web.whatsapp.com/send?phone={phone}",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "WhatsApp/2.21.1"
+        },
+        "sleep": 2
+      },
+      "Instagram_Login": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.instagram.com/accounts/login/",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Instagram/143.0.0.25.119"
+        },
+        "sleep": 2
+      },
+      "Facebook_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.facebook.com/login/",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Facebook/300.0.0.27.118"
+        },
+        "sleep": 2
+      },
+      "Twitter_Login": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://api.twitter.com/1.1/account/login.json",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Twitter/10.0"
+        },
+        "sleep": 2
+      },
+      "LinkedIn_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.linkedin.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "LinkedIn/1.0"
+        },
+        "sleep": 3
+      },
+      "Telegram_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://telegram.org/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Telegram/1.0"
+        },
+        "sleep": 2
+      },
+      "Skype_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.skype.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Skype/1.0"
+        },
+        "sleep": 3
+      },
+      "Zoom_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://zoom.us/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Zoom/5.0"
+        },
+        "sleep": 2
+      },
+      "Slack_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://slack.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Slack/1.0"
+        },
+        "sleep": 2
+      },
+      "Discord_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://discord.com/register",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Discord/1.0"
+        },
+        "sleep": 2
+      },
+      "Signal_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://signal.org/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Signal/1.0"
+        },
+        "sleep": 2
+      },
+      "Viber_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://viber.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Viber/1.0"
+        },
+        "sleep": 2
+      },
+      "WeChat_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://wechat.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "WeChat/1.0"
+        },
+        "sleep": 2
+      },
+      "Line_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://line.me/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Line/1.0"
+        },
+        "sleep": 2
+      },
+      "KakaoTalk_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://talk.kakao.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "KakaoTalk/1.0"
+        },
+        "sleep": 2
+      },
+      "Snapchat_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://snapchat.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Snapchat/1.0"
+        },
+        "sleep": 2
+      },
+      "TikTok_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://tiktok.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "TikTok/1.0"
+        },
+        "sleep": 2
+      },
+      "Pinterest_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://pinterest.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Pinterest/1.0"
+        },
+        "sleep": 2
+      },
+      "Reddit_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://reddit.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Reddit/1.0"
+        },
+        "sleep": 2
+      },
+      "Tumblr_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://tumblr.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Tumblr/1.0"
+        },
+        "sleep": 2
+      },
+      "Blogger_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://blogger.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Blogger/1.0"
+        },
+        "sleep": 2
+      },
+      "WordPress_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://wordpress.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "WordPress/1.0"
+        },
+        "sleep": 2
+      },
+      "Medium_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://medium.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Medium/1.0"
+        },
+        "sleep": 2
+      },
+      "Substack_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://substack.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Substack/1.0"
+        },
+        "sleep": 2
+      },
+      "Ghost_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://ghost.org/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Ghost/1.0"
+        },
+        "sleep": 2
+      },
+      "Wix_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://wix.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Wix/1.0"
+        },
+        "sleep": 2
+      },
+      "Squarespace_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://squarespace.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Squarespace/1.0"
+        },
+        "sleep": 2
+      },
+      "Weebly_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://weebly.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Weebly/1.0"
+        },
+        "sleep": 2
+      },
+      "Shopify_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://shopify.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Shopify/1.0"
+        },
+        "sleep": 2
+      },
+      "BigCommerce_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://bigcommerce.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "BigCommerce/1.0"
+        },
+        "sleep": 2
+      },
+      "WooCommerce_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://woocommerce.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "WooCommerce/1.0"
+        },
+        "sleep": 2
+      },
+      "Magento_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://magento.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Magento/1.0"
+        },
+        "sleep": 2
+      },
+      "PrestaShop_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://prestashop.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "PrestaShop/1.0"
+        },
+        "sleep": 2
+      },
+      "OpenCart_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://opencart.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "OpenCart/1.0"
+        },
+        "sleep": 2
+      },
+      "Volusion_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://volusion.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Volusion/1.0"
+        },
+        "sleep": 2
+      },
+      "BigCartel_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://bigcartel.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "BigCartel/1.0"
+        },
+        "sleep": 2
+      },
+      "Etsy_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://etsy.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Etsy/1.0"
+        },
+        "sleep": 2
+      },
+      "eBay_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://ebay.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "eBay/1.0"
+        },
+        "sleep": 2
+      },
+      "Amazon_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://amazon.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Amazon/1.0"
+        },
+        "sleep": 2
+      },
+      "Walmart_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://walmart.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Walmart/1.0"
+        },
+        "sleep": 2
+      },
+      "Target_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://target.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Target/1.0"
+        },
+        "sleep": 2
+      },
+      "Best_Buy_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://bestbuy.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Best Buy/1.0"
+        },
+        "sleep": 2
+      },
+      "Costco_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://costco.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Costco/1.0"
+        },
+        "sleep": 2
+      },
+      "Sam's_Club_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://samsclub.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Sam's Club/1.0"
+        },
+        "sleep": 2
+      },
+      "BJ's_Club_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://bjspremium.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "BJ's Club/1.0"
+        },
+        "sleep": 2
+      },
+      "Kroger_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://kroger.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Kroger/1.0"
+        },
+        "sleep": 2
+      },
+      "Albertsons_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://albertsons.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Albertsons/1.0"
+        },
+        "sleep": 2
+      },
+      "Publix_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://publix.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Publix/1.0"
+        },
+        "sleep": 2
+      },
+      "HEB_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://heb.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "H-E-B/1.0"
+        },
+        "sleep": 2
+      },
+      "Whole_Foods_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://wholefoods.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Whole Foods/1.0"
+        },
+        "sleep": 2
+      },
+      "Trader_Joe's_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://traderjoes.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Trader Joe's/1.0"
+        },
+        "sleep": 2
+      },
+      "Aldi_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://aldi.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Aldi/1.0"
+        },
+        "sleep": 2
+      },
+      "Lidl_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://lidl.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Lidl/1.0"
+        },
+        "sleep": 2
+      },
+      "Wegmans_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://wegmans.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Wegmans/1.0"
+        },
+        "sleep": 2
+      },
+      "Shaws_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://shaws.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Shaws/1.0"
+        },
+        "sleep": 2
+      },
+      "Stop_and_Shop_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://stopandshop.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Stop and Shop/1.0"
+        },
+        "sleep": 2
+      },
+      "Giant_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://giants.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Giant/1.0"
+        },
+        "sleep": 2
+      },
+      "Harris_Teeter_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://harristeeter.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Harris Teeter/1.0"
+        },
+        "sleep": 2
+      },
+      "Acme_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://acme.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Acme/1.0"
+        },
+        "sleep": 2
+      },
+      "Weis_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://weis.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Weis/1.0"
+        },
+        "sleep": 2
+      },
+      "Jewel-Safeway_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://jewel-safeway.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Jewel-Safeway/1.0"
+        },
+        "sleep": 2
+      },
+      "Vons_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://vons.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Vons/1.0"
+        },
+        "sleep": 2
+      },
+      "Pavilions_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://pavilions.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Pavilions/1.0"
+        },
+        "sleep": 2
+      },
+      "Fry's_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://frys.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Fry's/1.0"
+        },
+        "sleep": 2
+      },
+      "Baker_Taylor_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://bakertaylor.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Baker Taylor/1.0"
+        },
+        "sleep": 2
+      },
+      "Randalls_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://randalls.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Randalls/1.0"
+        },
+        "sleep": 2
+      },
+      "Tom_G Thumb_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://tomthumb.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Tom G Thumb/1.0"
+        },
+        "sleep": 2
+      },
+      "United_Supermarkets_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://unitedsupermarkets.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "United Supermarkets/1.0"
+        },
+        "sleep": 2
+      },
+      "H-E-B_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://heb.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "H-E-B/1.0"
+        },
+        "sleep": 2
+      },
+      "Kroger_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://kroger.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Kroger/1.0"
+        },
+        "sleep": 2
+      },
+      "Ralph's_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://ralphs.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Ralph's/1.0"
+        },
+        "sleep": 2
+      },
+      "Foods_Co_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://foodscopy.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Foods Co/1.0"
+        },
+        "sleep": 2
+      },
+      "Gerber_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://gerber.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Gerber/1.0"
+        },
+        "sleep": 2
+      },
+      "City_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://city.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "City/1.0"
+        },
+        "sleep": 2
+      },
+      "Dillons_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://dillons.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Dillons/1.0"
+        },
+        "sleep": 2
+      },
+      "King_Sooper_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://kingsooper.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "King Sooper/1.0"
+        },
+        "sleep": 2
+      },
+      "Smith's_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://smiths.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Smith's/1.0"
+        },
+        "sleep": 2
+      },
+      "Baker_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://baker.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Baker/1.0"
+        },
+        "sleep": 2
+      },
+      "Fry's_Food_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://frysfod.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Fry's Food/1.0"
+        },
+        "sleep": 2
+      },
+      "Albertsons_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://albertsons.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Albertsons/1.0"
+        },
+        "sleep": 2
+      },
+      "Safeway_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://safeway.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Safeway/1.0"
+        },
+        "sleep": 2
+      },
+      "Vons_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://vons.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Vons/1.0"
+        },
+        "sleep": 2
+      },
+      "Pavilions_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://pavilions.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Pavilions/1.0"
+        },
+        "sleep": 2
+      },
+      "Randalls_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://randalls.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Randalls/1.0"
+        },
+        "sleep": 2
+      },
+      "Tom_G_Thumb_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://tomthumb.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Tom G Thumb/1.0"
+        },
+        "sleep": 2
+      },
+      "United_Supermarkets_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://unitedsupermarkets.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "United Supermarkets/1.0"
+        },
+        "sleep": 2
+      },
+      "H-E-B_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://heb.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "H-E-B/1.0"
+        },
+        "sleep": 2
+      },
+      "Kroger_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://kroger.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Kroger/1.0"
+        },
+        "sleep": 2
+      },
+      "Ralph's_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://ralphs.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Ralph's/1.0"
+        },
+        "sleep": 2
+      },
+      "Foods_Co_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://foodscopy.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Foods Co/1.0"
+        },
+        "sleep": 2
+      },
+      "Gerber_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://gerber.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Gerber/1.0"
+        },
+        "sleep": 2
+      },
+      "City_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://city.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "City/1.0"
+        },
+        "sleep": 2
+      },
+      "Dillons_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://dillons.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Dillons/1.0"
+        },
+        "sleep": 2
+      },
+      "King_Sooper_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://kingsooper.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "King Sooper/1.0"
+        },
+        "sleep": 2
+      },
+      "Smith's_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://smiths.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Smith's/1.0"
+        },
+        "sleep": 2
+      },
+      "Baker_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://baker.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Baker/1.0"
+        },
+        "sleep": 2
+      },
+      "Fry's_Food_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://frysfod.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Fry's Food/1.0"
+        },
+        "sleep": 2
+      },
+      "Albertsons_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://albertsons.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Albertsons/1.0"
+        },
+        "sleep": 2
+      },
+      "Safeway_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://safeway.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Safeway/1.0"
+        },
+        "sleep": 2
+      },
+      "Vons_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://vons.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Vons/1.0"
+        },
+        "sleep": 2
+      },
+      "Pavilions_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://pavilions.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Pavilions/1.0"
+        },
+        "sleep": 2
+      },
+      "Randalls_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://randalls.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Randalls/1.0"
+        },
+        "sleep": 2
+      },
+      "Tom_G_Thumb_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://tomthumb.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Tom G Thumb/1.0"
+        },
+        "sleep": 2
+      },
+      "United_Supermarkets_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://unitedsupermarkets.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "United Supermarkets/1.0"
+        },
+        "sleep": 2
+      },
+      "H-E-B_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://heb.com/signup",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "H-E-B/1.0"
+        },
+        "sleep": 2
+      }
+    },
+    "TRAVEL_AND_TRANSPORT": {
+      "Ola_Cab_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://api.olacabs.com/api/v1/user/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "sleep": 2
+      },
+      "Uber_Ride_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://api.uber.com/v1/ride/otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "sleep": 2
+      },
+      "MakeMyTrip_Booking": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.makemytrip.com/api/v1/otp/send",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "sleep": 3
+      },
+      "GoIber_Booking": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.goibibo.com/api/v1/otp/send",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "sleep": 3
+      },
+      "ClearTrip_Booking": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.cleartrip.com/api/v1/otp/send",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "sleep": 3
+      },
+      "Yatra_Booking": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.yatra.com/api/v1/otp/send",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "sleep": 3
+      },
+      "Expedia_Booking": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.expedia.com/api/v1/otp/send",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "sleep": 3
+      },
+      "Booking_Com_Hotel": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.booking.com/api/v1/otp/send",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "sleep": 3
+      },
+      "Agoda_Hotel": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.agoda.com/api/v1/otp/send",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "sleep": 3
+      },
+      "Hotels_Com_Hotel": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.hotels.com/api/v1/otp/send",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "sleep": 3
+      },
+      "Trivago_Hotel": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.trivago.com/api/v1/otp/send",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "sleep": 3
+      },
+      "Skyscanner_Flight": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.skyscanner.com/api/v1/otp/send",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "sleep": 3
+      },
+      "Kayak_Flight": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.kayak.com/api/v1/otp/send",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "sleep": 3
+      },
+      "Google_Flights": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.google.com/flights/otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "sleep": 3
+      },
+      "AirIndia_Flight": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.airindia.com/api/v1/otp/send",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "sleep": 3
+      },
+      "IndiGo_Flight": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.goindigo.in/api/v1/otp/send",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "sleep": 3
+      },
+      "SpiceJet_Flight": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.spicejet.com/api/v1/otp/send",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "sleep": 3
+      },
+      "Jet_Airways_Flight": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.jetairways.com/api/v1/otp/send",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "sleep": 3
+      },
+      
