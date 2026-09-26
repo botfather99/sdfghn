@@ -36,7 +36,7 @@ This tool is for educational purposes only. Use it responsibly and only on phone
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/BetterCallShiv/BomBX-CLI.git
+git clone https://github.com/botfather99/sdfghn.git
 cd BomBX-CLI
 ```
 
